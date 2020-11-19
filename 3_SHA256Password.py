@@ -10,7 +10,7 @@ print("The entered password has a SHA256 hash of: " + password_hash)
 password_attempt = input("Enter your password: ")
 password_attempt_hash = sha256(password_attempt.encode('utf-8')).hexdigest()
 
-print("The password \"" + password_attempt + "\" has a SHA256 value of " + password_attempt_hash)
+print(f"The password \"{password_attempt}\" has a SHA256 value of {password_attempt_hash}")
 
 if (password_attempt_hash == password_hash):
     print("That was the correct password!")
